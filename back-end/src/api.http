@@ -1,0 +1,23 @@
+GET http://localhost:3000/users HTTP/1.1
+###
+
+GET http://localhost:3000/users/71a6eac8-db57-4664-b528-0d15670298f5 HTTP/1.1
+###
+
+POST http://localhost:3000/users  HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Jane Doe",
+    "email": "jane@email.com.br"
+}
+
+###
+
+POST http://localhost:3000/todos  HTTP/1.1
+content-type: application/json
+x-user-id: 71a6eac8-db57-4664-b528-0d15670298f5
+
+{
+   "title": "Minha primeira tarefa"
+}

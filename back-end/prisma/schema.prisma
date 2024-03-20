@@ -8,7 +8,40 @@ generator client {
   provider = "prisma-client-js"
 }
 
+// original database
+
+//datasource db {
+//  provider = "postgresql"
+//  url      = env("DATABASE_URL")
+//}
+
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider = "sqlite"
+  url =  "file:./dev.db"
+}
+
+model User {
+  id String @id @default(uuid())
+  name String
+  email String @unique
+
+  customerId String ?
+  subscriptionId String ?
+
+  todo Todo[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Todo {
+  id String @id @default(uuid())
+  title String 
+  done Boolean @default(false)
+
+  owner User @relation(fields: [ownerId], references: [id])
+  ownerId String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
