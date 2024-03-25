@@ -20,3 +20,8 @@ This project was created using `bun init` in bun v1.0.30. [Bun](https://bun.sh) 
 bun prisma studio // view model interface
 
 run migrate: bun prisma migrate dev --name add-relation-todo-on-user
+bun prisma migrate dev --name add-stripe-fields-on-user
+
+run webhook:
+
+stripe listen --forward-to localhost:3000/stripe

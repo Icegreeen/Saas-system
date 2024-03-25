@@ -25,10 +25,11 @@ model User {
   name String
   email String @unique
 
-  customerId String ?
-  subscriptionId String ?
+  stripeCustomerId String ?
+  stripeSubscriptionId String ?
+  stripeSubscriptionStatus String ?
 
-  todo Todo[]
+  todos Todo[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt

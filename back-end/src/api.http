@@ -8,16 +8,20 @@ POST http://localhost:3000/users  HTTP/1.1
 content-type: application/json
 
 {
-    "name": "Jane Doe",
-    "email": "jane@email.com.br"
+    "name": "Beatriz",
+    "email": "beatriz@email.com.br"
+}
+
+###
+POST http://localhost:3000/todos  HTTP/1.1
+content-type: application/json
+x-user-id: cb17f6b5-70dc-4c98-baf0-567c07db3f52
+
+{
+   "title": "Task 6#"
 }
 
 ###
 
-POST http://localhost:3000/todos  HTTP/1.1
-content-type: application/json
-x-user-id: 71a6eac8-db57-4664-b528-0d15670298f5
-
-{
-   "title": "Minha primeira tarefa"
-}
+POST http://localhost:3000/checkout  HTTP/1.1
+x-user-id: d4a7d582-bf98-42e1-86d2-4837ef962436

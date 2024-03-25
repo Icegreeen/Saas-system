@@ -13,12 +13,32 @@ export const createTodoController = async (request: Request, response: Response)
     const user = await prisma.user.findUnique({
         where: {
             id: userId as string
+        },
+
+        select: {
+            id: true,
+            stripeSubscriptionId: true,
+            stripeSubscriptionStatus: true,
+            _count: {
+                select: {
+                    todos: true
+                }
+            }
         }
     })
-
+    
     if(!user) {
         return response.status(403).send({
             error: 'Not authorized'
+        })
+    }
+
+    const hasQuotaAvailable = user._count.todos <= 4;
+    const hasActiveSubscription = !!user.stripeSubscriptionId;
+
+    if(!hasQuotaAvailable && !hasActiveSubscription && user.stripeSubscriptionStatus !== 'active') {
+        return response.status(403).send({
+            error: 'Not quota available. Please upgrade youy plan.'
         })
     }
 
