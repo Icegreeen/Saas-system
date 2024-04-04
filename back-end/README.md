@@ -17,7 +17,7 @@ The BACK-END of a Saas application (software as a service) - payment system (Sub
 
 #### Clone repository
 ```bash
-git clone https://github.com/Icegreeen/my-blog.git
+git clone https://github.com/Icegreeen/Saas-system
 ```
 
 #### Define environment variables
@@ -54,7 +54,7 @@ Define the environment variables by creating a .env.local file similar to [.env.
 
 **Question:** What are the technologies used in this project?
 
-**Answer:** [Next.js](https://nextjs.org/), [Tailwind](), [Shadcn/ui]() and [Prisma]()
+**Answer:** [Next.js](https://nextjs.org/), [Express](), [Bun](), [Stripe]() and [Prisma]()
 
 # :bug: Issues
 

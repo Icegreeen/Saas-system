@@ -19,7 +19,7 @@ The front-end of a Saas application (software as a service), dashboard and landi
 
 #### Clone repository
 ```bash
-git clone https://github.com/Icegreeen/my-blog.git
+git clone https://github.com/Icegreeen/Saas-system
 ```
 
 #### Define environment variables
