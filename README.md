@@ -14,13 +14,15 @@ This project aims to provide an initial structure for the creation of MicroSaaS 
 
 ## Front-end Features
 
-- Loading....
+- Login system
+- Dashboard
+- Landing page
 
 ## System Requirements
 
 Back-end: Express + Bun + Prisma + Stripe
 
-Front-end: NextJS + Tailwind 
+Front-end: NextJS + Tailwind + Shadcn/ui + Prisma
 
 ## Installation and Usage
 
