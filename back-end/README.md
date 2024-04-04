@@ -3,8 +3,6 @@
 </h1>
 
 > Project status: Completed :heavy_check_mark:
-
-![Captura de tela de 2024-04-04 12-30-59](https://github.com/Icegreeen/Saas-system/assets/56550632/4495b9d6-b1ea-4fba-923c-39666acf1aee)
                                   
 # :pushpin: Table of Contents
 
@@ -38,13 +36,13 @@ bun install
 bun dev 
 ```
 
-### run webhook:
+#### Run webhook:
 
 ```bash
 stripe listen --forward-to localhost:3000/stripe
 ```
 
-### view model interface:
+#### View model interface:
 
 ```bash
 bun prisma studio
