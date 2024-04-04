@@ -15,8 +15,8 @@ This project aims to provide an initial structure for the creation of MicroSaaS 
 ## Front-end Features
 
 - Login system
-- Dashboard
-- Landing page
+- Dashboard (Loading...)
+- Landing page (Loading...)
 
 ## System Requirements
 

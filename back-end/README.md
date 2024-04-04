@@ -1,27 +1,67 @@
-# micro-saas-api
+<h1 align="left">
+    <a">Back-end - SaaS</a>
+</h1>
 
-To install dependencies:
+> Project status: Completed :heavy_check_mark:
 
+![Captura de tela de 2024-04-04 12-30-59](https://github.com/Icegreeen/Saas-system/assets/56550632/4495b9d6-b1ea-4fba-923c-39666acf1aee)
+                                  
+# :pushpin: Table of Contents
+
+* [Running Locally](#construction_worker-running-locally)
+* [FAQ](#postbox-faq)
+* [Issues](#bug-issues)
+* [Contributing](#tada-contributing)
+
+## :construction_worker: Running Locally
+
+The BACK-END of a Saas application (software as a service) - payment system (Subscription Management).
+
+#### Clone repository
+```bash
+git clone https://github.com/Icegreeen/my-blog.git
+```
+
+#### Define environment variables
+```bash
+cp .env.local.example .env.local
+
+PUBLISHABLEKEY=STRIPE
+SECRETKEY=STRIPE
+PRO_PRICE_ID=STRIPE
+WEBHOOKSECRET=STRIPE
+```
+
+#### Install dependencies & execute web application in development mode
 ```bash
 bun install
+bun dev 
 ```
 
-To run:
+### run webhook:
 
 ```bash
-bun run index.ts
+stripe listen --forward-to localhost:3000/stripe
 ```
 
-This project was created using `bun init` in bun v1.0.30. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+### view model interface:
 
+```bash
+bun prisma studio
+```
 
+Define the environment variables by creating a .env.local file similar to [.env.local.example](https://github.com/Icegreeen/Saas-system)
 
+# :postbox: Faq
 
-bun prisma studio // view model interface
+**Question:** What are the technologies used in this project?
 
-run migrate: bun prisma migrate dev --name add-relation-todo-on-user
-bun prisma migrate dev --name add-stripe-fields-on-user
+**Answer:** [Next.js](https://nextjs.org/), [Tailwind](), [Shadcn/ui]() and [Prisma]()
 
-run webhook:
+# :bug: Issues
 
-stripe listen --forward-to localhost:3000/stripe
+Feel free to **file a new issue** with a respective title and description. If you already found a solution to your problem, **I would love to review your pull request**!
+
+# :tada: Contributing
+
+Check out the [contributing](https://github.com/Icegreeen/my-blog/blob/main/CONTRIBUTING.md) page to see the best places to file issues, start discussions and begin contributing
