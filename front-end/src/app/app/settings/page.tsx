@@ -1,17 +1,14 @@
 import { DashboardPage, DashboardPageHeader, DashboardPageHeaderTittle, DashboardPageMain } from "@/components/dashboard/page";
 
-
-export default async function Page() {
-
-
+export default function Page() {
     return (
         <DashboardPage>
             <DashboardPageHeader>
-                <DashboardPageHeaderTittle>Tarefas</DashboardPageHeaderTittle>
+                <DashboardPageHeaderTittle>Configurações</DashboardPageHeaderTittle>
             </DashboardPageHeader>
 
             <DashboardPageMain>
-                <h1>Tarefas</h1>
+                <h1>Configurações</h1>
             </DashboardPageMain>
         </DashboardPage>
     )
